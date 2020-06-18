@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Your Results and Score"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="radioGroup"
+                    android:text="All" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="radioGroup"
+                    android:text="Right" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonWrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="radioGroup"
+                    android:text="Wrong" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonSortA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="radioGroup"
+                    android:text="SortA" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonSortD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="radioGroup"
+                    android:text="SortD" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></ListView>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Register: "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:hint="Enter your name"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score: "
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textSize="18sp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
